@@ -1,3 +1,5 @@
+package lesson_9;
+
 import java.util.*;
 
 public class Information {
