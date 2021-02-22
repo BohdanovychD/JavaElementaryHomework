@@ -1,4 +1,4 @@
-package Homework8;
+package lesson_8;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

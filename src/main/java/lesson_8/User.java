@@ -1,4 +1,4 @@
-package Homework8;
+package lesson_8;
 
 public class User extends Person {
 
