@@ -1,7 +1,10 @@
 package lesson_22.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table (name = "clients")
 public class Client {

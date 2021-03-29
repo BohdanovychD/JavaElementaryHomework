@@ -16,12 +16,12 @@ public class Main {
         Status status = new Status();
         StatusService statusService = new StatusServiceImpl();
 
-//        client.setPhone(380677196071L);
-//        client.setAbout("Kind and friendly");
-//        client.setEmail("alina2342@gmail.com");
-//        client.setName("Alina");
-//        client.setAge(22);
-//        clientService.save(client);
+        client.setPhone(380677196071L);
+        client.setAbout("Kind and friendly");
+        client.setEmail("alina2342@gmail.com");
+        client.setName("Alina");
+        client.setAge(22);
+        clientService.save(client);
 
 //        client.setId(4);
 //        client.setName("Valera");
