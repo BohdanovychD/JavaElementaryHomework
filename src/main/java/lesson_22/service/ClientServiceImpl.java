@@ -3,10 +3,15 @@ package lesson_22.service;
 import lesson_22.dao.ClientDao;
 import lesson_22.dao.ClientDaoImpl;
 import lesson_22.model.Client;
+import org.apache.log4j.Logger;
 
 public class ClientServiceImpl implements ClientService {
+
+    Logger logger = Logger.getLogger(ClientDaoImpl.class);
+
     @Override
     public void save(Client client) {
+        logger.debug(client.toString());
         ClientDao clientDao = new ClientDaoImpl();
 
         if (client.getEmail().isBlank() || client.getName().isBlank()) {
@@ -22,6 +27,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void update(Client client) {
+        logger.debug(client.toString());
         ClientDao clientDao = new ClientDaoImpl();
 
         if (client.getEmail().isBlank() || client.getName().isBlank()) {
@@ -39,6 +45,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void delete(Client client) {
+        logger.debug(client.toString());
         if (client.getEmail().isBlank() || client.getName().isBlank()) {
             return;
         }
@@ -49,6 +56,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public Client findById(long id) {
+        logger.debug("Information from client.findId");
         ClientDao clientDao = new ClientDaoImpl();
         return clientDao.findById(id);
     }

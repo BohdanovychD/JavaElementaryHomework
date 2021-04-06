@@ -4,9 +4,15 @@ import lesson_22.model.Account;
 import lesson_22.model.Client;
 import lesson_22.model.Status;
 import lesson_22.service.*;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 public class Main {
     public static void main(String[] args) {
+
+        Logger logger = Logger.getLogger(Main.class.getName());
+        logger.log(Level.DEBUG, "Something");
+
         Client client = new Client();
         ClientService clientService = new ClientServiceImpl();
 
